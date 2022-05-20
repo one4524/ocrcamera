@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "941125644869",
+    "project_id": "smartreceipt-4dea9",
+    "storage_bucket": "smartreceipt-4dea9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941125644869:android:b7b419e9fcc4a8a324292c",
+        "android_client_info": {
+          "package_name": "com.example.ocrcamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941125644869-9h7csjlp7nkb4gbr0c6brfnct3dnn5j6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsaerfA5hy0WpjCKHFijHbNkp2ev7ecU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941125644869-9h7csjlp7nkb4gbr0c6brfnct3dnn5j6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
