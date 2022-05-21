@@ -61,7 +61,10 @@ class CameraActivity : AppCompatActivity() {
         }
 
         // Set up the listeners for take photo and video capture buttons
-        viewBinding.imageCaptureButton.setOnClickListener { takePhoto() }
+        viewBinding.imageCaptureButton.setOnClickListener {
+            takePhoto()
+            viewBinding.cancel.visibility = View.INVISIBLE
+        }
        // viewBinding.videoCaptureButton.setOnClickListener { captureVideo() }
 
         cameraExecutor = Executors.newSingleThreadExecutor()
@@ -70,12 +73,15 @@ class CameraActivity : AppCompatActivity() {
             if(viewBinding.imageView.drawable != null){
                 bitmap = viewBinding.imageView.drawable.toBitmap()
                 openDetail()
+                finish()
             }
            }
 
         viewBinding.again.setOnClickListener {
             viewBinding.behindBox.visibility = View.INVISIBLE
-            viewBinding.frontBox.visibility = View.VISIBLE }
+            viewBinding.frontBox.visibility = View.VISIBLE
+            viewBinding.cancel.visibility = View.VISIBLE
+            }
 
         viewBinding.cancel.setOnClickListener {
             finish()

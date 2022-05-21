@@ -31,7 +31,7 @@ class GoodsDetailActivity : AppCompatActivity() {
         detailBinding.name.setText(arrayList!![1])
         detailBinding.money.setText(arrayList[2])
 
-        detailBinding.dataPicker.init(arrayList[3].toInt(),arrayList[4].toInt(), arrayList[5].toInt(), DatePicker.OnDateChangedListener { datePicker, i, i2, i3 ->  })
+        detailBinding.dataPicker.init(arrayList[3].toInt(),arrayList[4].toInt() -1, arrayList[5].toInt(), DatePicker.OnDateChangedListener { datePicker, i, i2, i3 ->  })
 
 
         detailBinding.save.setOnClickListener {
@@ -41,7 +41,7 @@ class GoodsDetailActivity : AppCompatActivity() {
                 "place" to detailBinding.name.text.toString(),
                 "money" to detailBinding.money.text.toString(),
                 "year" to detailBinding.dataPicker.year.toString(),
-                "month" to detailBinding.dataPicker.month.toString(),
+                "month" to (detailBinding.dataPicker.month+1).toString(),
                 "day" to detailBinding.dataPicker.dayOfMonth.toString()
             )
 
