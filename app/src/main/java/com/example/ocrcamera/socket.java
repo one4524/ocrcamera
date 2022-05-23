@@ -19,8 +19,8 @@ public class socket {
     private Socket socket;
     private DataOutputStream dos;
     private DataInputStream dis;
-    private final String ip = "10.0.2.2";
-    //private String ip = "121.128.170.170";
+    //private final String ip = "10.0.2.2";
+    private String ip = "192.168.0.10";
     private final int port = 7070;
     private String str;
     ByteArrayOutputStream byteArray;

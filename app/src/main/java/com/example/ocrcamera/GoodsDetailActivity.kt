@@ -11,6 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QueryDocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 
 class GoodsDetailActivity : AppCompatActivity() {
@@ -28,16 +29,30 @@ class GoodsDetailActivity : AppCompatActivity() {
 
         val arrayList = intent.getStringArrayListExtra("data")
 
-        detailBinding.name.setText(arrayList!![1])
+        val today = Calendar.getInstance()
+        val year = today.get(Calendar.YEAR)
+        val month = today.get(Calendar.MONTH) + 1
+        val day = today.get(Calendar.DATE)
+
+        val y = arrayList!![3]
+
+        if (y == "0000"){
+            detailBinding.dataPicker.init(year,month, day, DatePicker.OnDateChangedListener { datePicker, i, i2, i3 ->  })
+        }
+        else{
+            detailBinding.dataPicker.init(arrayList[3].toInt(),arrayList[4].toInt() -1, arrayList[5].toInt(), DatePicker.OnDateChangedListener { datePicker, i, i2, i3 ->  })
+        }
+
+
+
+
+        detailBinding.name.setText(arrayList[1])
         detailBinding.money.setText(arrayList[2])
-
-        detailBinding.dataPicker.init(arrayList[3].toInt(),arrayList[4].toInt() -1, arrayList[5].toInt(), DatePicker.OnDateChangedListener { datePicker, i, i2, i3 ->  })
-
 
         detailBinding.save.setOnClickListener {
 
             val itemMap = hashMapOf<String, String>(
-                "id" to arrayList!![0],
+                "id" to arrayList[0],
                 "place" to detailBinding.name.text.toString(),
                 "money" to detailBinding.money.text.toString(),
                 "year" to detailBinding.dataPicker.year.toString(),

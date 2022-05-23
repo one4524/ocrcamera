@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ocrcamera" >
+    package="com.example.ocrcamera">
 
     <uses-feature android:name="android.hardware.camera.any" />
 
@@ -17,12 +17,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ocrcamera" >
+        android:theme="@style/Theme.Ocrcamera">
+        <activity
+            android:name=".ModifyActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Ocrcamera.NoActionBar" >
+            android:theme="@style/Theme.Ocrcamera.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,9 +35,9 @@
         <activity
             android:name=".GoodsDetailActivity"
             android:exported="false" />
-
-        <activity android:name=".CameraActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

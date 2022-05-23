@@ -77,7 +77,8 @@ class MainActivity : AppCompatActivity() {
                         items.add(DayData(doc["id"] as String,
                             doc["place"] as String,
                             doc["money"] as String, doc["year"] as String,
-                            doc["month"] as String, doc["day"] as String
+                            doc["month"] as String, doc["day"] as String,
+                            doc.id
                         ))
                 }
 

@@ -6,5 +6,6 @@ data class DayData(
     val money: String,
     val year: String,
     val month: String,
-    val day: String
+    val day: String,
+    val docid: String
 )
